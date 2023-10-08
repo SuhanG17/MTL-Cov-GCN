@@ -4,6 +4,9 @@ data/
 # Logs
 logs/
 
+# Packages
+whls/
+
 # Auxiliary 
 __pycache__/
 training_output.txt
