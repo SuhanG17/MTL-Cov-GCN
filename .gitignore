@@ -1,0 +1,12 @@
+# Data
+data/
+
+# Logs
+logs/
+
+# Auxiliary 
+__pycache__/
+training_output.txt
+training_output.log
+commmand.pid
+
