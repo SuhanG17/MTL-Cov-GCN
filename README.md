@@ -19,6 +19,7 @@ A repository for the code for Cov-GCN, MTL-Cov_GCN and related experiments
 │   └── trainer_single_process.py # main script to run if train for a sinlge model
 │   └── trainer.py # main script to run if train for a multiple models in a loop
 │   └── utils.py # auxilliary tools, set random seed, calculate sparsity and threshold, etc.
+│   └── run.sh # bash script to train or test model, instructions inside
 ├── dir3
 ├── file_in_root.ext
 └── README.md
