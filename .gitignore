@@ -8,5 +8,7 @@ logs/
 __pycache__/
 training_output.txt
 training_output.log
-commmand.pid
+testing_output.txt
+testing_output.log
+command.pid
 

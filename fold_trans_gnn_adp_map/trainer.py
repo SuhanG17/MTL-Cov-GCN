@@ -474,40 +474,9 @@ if __name__ == '__main__':
 
         meta_save.output_metadata_test(test_dict=test_dict, computation_time=testing_time, 
                                     batch_size=batch_size_test, batch_num=batch_num_test)
-        
-        meta_save.save_tensors(real_res_list, 'targets_raw.pt')
-        meta_save.save_tensors(out_list, 'outputs_raw.pt')
-        meta_save.save_tensors(cumu_supp_enc, 'cumu_supp_enc.pt')
-        # meta_save.save_tensors(cumu_supp_dec, 'cumu_supp_dec.pt')
-        print(out_list)
 
-
-# import os
-# os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-# os.environ["CUDA_VISIBLE_DEVICES"] = "3,2,5,4"
-
-# tunable_config = t_config
-# network = build_network(config.input_dim, config.target_dim,
-#                         tunable_config.N, tunable_config.d_model, tunable_config.d_ff, tunable_config.h, tunable_config.dropout, 
-#                         tunable_config.add_gcn, config.sensors, supports,
-#                         config.set_diag, config.undirected, config.truncate, config.threshold, config.sparsity_ratio, config.num_layers, config.bn, config.conv_type, config.num_maps, config.adp_supp_len,
-#                         device, True, config.load_net_path)
-
-# train_loader, val_loader, _, scaler = build_dataset(config.dataset_path, config.norm_method, config.past_history_factor, config.trg_seq_len, config.pollute, config.pollute_ratio, config.gamble, None,
-#                                                         config.rand, config.ratio, config.batch_size, config.shuffle, config.drop_last)
-    
-
-# num_samples = len(train_loader)
-
-# for sample_id, (inputs, targets, targets_raw) in enumerate(train_loader):
-#     # [batch_size, sensors, seq_len, dim]
-#     inputs = inputs.to(device)
-#     targets = targets.to(device)
-
-#     # create mask using Batch class
-#     batch = Batch(inputs, targets, pad=-10, device=device) # did not implement padding, -10 is arbitrary
-
-
-#     # ➡ Forward pass
-#     outputs, sf_enc, sf_dec = network(batch.src, batch.trg, batch.src_mask, batch.trg_mask, beta)
-#     break
+        # if you need to save outputs
+        # meta_save.save_tensors(real_res_list, 'targets_raw.pt')
+        # meta_save.save_tensors(out_list, 'outputs_raw.pt')
+        # if you need to save adjacency matrices
+        # meta_save.save_tensors(cumu_supp_enc, 'cumu_supp_enc.pt')
